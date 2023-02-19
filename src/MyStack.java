@@ -16,16 +16,18 @@ public class MyStack<T>{
         this(100);
     }
 
-
+    //checks if it is empty
     public boolean isEmpty(){
         return topIndex==-1;
     }
 
+    //check if it's full
     public boolean isFull(){
         return topIndex == maxSize - 1;
     }
 
 
+    //pops one from the topindex
     public T pop() throws StackUnderflowException{
         if(isEmpty())
             throw new StackUnderflowException("Stack is empty");
@@ -37,6 +39,7 @@ public class MyStack<T>{
         return top;
     }
 
+    //checks the top index usually called peak but for our case I called it top
     public T top() throws StackUnderflowException{
         if(isEmpty())
             throw new StackUnderflowException("Stack is empty");
@@ -44,6 +47,7 @@ public class MyStack<T>{
         return Stack[topIndex];
     }
 
+    //pushes it into the Stack
     public boolean push(T e) throws StackOverflowException{
         if(isFull())
             throw new StackOverflowException("Stack is full");
@@ -56,6 +60,7 @@ public class MyStack<T>{
     }
 
 
+    //prints what's in the stack, not needed for this project but why not just have it lol
     public String toString(){
         String result = "";
 

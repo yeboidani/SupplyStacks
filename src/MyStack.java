@@ -44,10 +44,6 @@ public class MyStack<T>{
         return Stack[topIndex];
     }
 
-    public int size(){
-        return topIndex+1;
-    }
-
     public boolean push(T e) throws StackOverflowException{
         if(isFull())
             throw new StackOverflowException("Stack is full");
@@ -59,6 +55,7 @@ public class MyStack<T>{
 
     }
 
+
     public String toString(){
         String result = "";
 
@@ -68,31 +65,6 @@ public class MyStack<T>{
 
         return result;
     }
-
-    public String toString(String delimiter){
-        String result = "";
-
-        for(int i = 0; i < topIndex; i++){
-            result += Stack[i] + delimiter;
-        }
-        result += Stack[topIndex];
-
-
-
-        return result;
-    }
-
-    public void fill(ArrayList<T> list) throws StackOverflowException{
-        if(isFull())
-            throw new StackOverflowException("Stack is full");
-
-        for(T s: list)
-            push(s);
-
-    }
-
-
-
 
 
 }

@@ -14,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) throws StackOverflowException, StackUnderflowException {
 
+        //pushes The Characters in a Stack :)
         Stack1.push("N"); Stack1.push("C"); Stack1.push("R"); Stack1.push("T"); Stack1.push("M"); Stack1.push("Z"); Stack1.push("P");
         Stack2.push("D"); Stack2.push("N"); Stack2.push("T"); Stack2.push("S"); Stack2.push("B"); Stack2.push("Z");
         Stack3.push("M"); Stack3.push("H"); Stack3.push("Q"); Stack3.push("R"); Stack3.push("F"); Stack3.push("C"); Stack3.push("T"); Stack3.push("G");
@@ -27,9 +28,11 @@ public class Main {
         //move 7 from 6 to 8
 
         //example
-        String[] Instructions = {"move 2 from 4 to 5"};
+        String[] Instructions = {"move 1 from 4 to 5", "move 1 from 1 to 2"};
         for(String s: Instructions){
+            //splits the Instruction into different parts and so we can get the amount of crates, the initial location and the final location
             String[] parts = s.split(" ");
+
             int crateNum = Integer.parseInt(parts[1]);
             int fromStack = Integer.parseInt(parts[3]);
             int toStack = Integer.parseInt(parts[5]);
@@ -42,12 +45,12 @@ public class Main {
             }
 
         }
-
+        //prints the top of the Stacks
         System.out.println(Stack1.top()+ Stack2.top()+ Stack3.top()+ Stack4.top()+ Stack5.top()+ Stack6.top()+ Stack7.top()+ Stack8.top()+ Stack9.top() );
 
     }
 
-    //method to help the Stack get to a given index
+    //method to help get the correct Stack
     private static MyStack<String> StackAt(int index){
         switch(index){
             case 1:

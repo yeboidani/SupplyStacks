@@ -14,6 +14,8 @@ public class Main {
     private static MyStack<String> Stack8 = new MyStack<>();
     private static MyStack<String> Stack9 = new MyStack<>();
 
+    //private static MyStack<String>[] Stack = new MyStack[9];
+
     public static void main(String[] args) throws StackOverflowException, StackUnderflowException {
 
         //pushes The Characters in a Stack :)
@@ -100,11 +102,10 @@ public class Main {
 
 
 
+        //example
         //move 7 from 6 to 8
 
-        //example
         //put all the instructions in the Instructions String
-
         String[] Instructions = {"move 1 from 4 to 5", "move 2 from 1 to 2"};
 
         //for each loop
@@ -129,6 +130,8 @@ public class Main {
 
         //create a visualization of the code for practice
     }
+
+    //enum better sol
 
     //method to help get the correct Stack
     private static MyStack<String> StackAt(int index){
